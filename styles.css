@@ -1,0 +1,66 @@
+:root {
+  --red-color: hsl(0, 100%, 74%);
+  --green-color: hsl(154, 59%, 51%);
+  --blue-color: hsl(248, 32%, 49%);
+  --dark-blue-color: hsl(249, 10%, 26%);
+  --grayish-blue-color: hsl(246, 25%, 77%);
+  --white-color: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('./images/bg-intro-desktop.png');
+  background-color: var(--red-color);
+}
+
+.root-container {
+  display: flex;
+}
+
+.right-container {
+  width: 50%;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.left-container {
+  width: 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  padding: 40px;
+  border-radius: 10px;
+  input {
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    padding: 6px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-color);
+  height: 60px;
+  border-radius: 10px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+    color: var(--white-color);
+  }
+}
+
+.button {
+    
+}
