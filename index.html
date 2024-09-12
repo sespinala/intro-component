@@ -37,46 +37,56 @@
     <script src="./script.js"></script>
     <div class="root-container">
       <div class="right-container">
-        <!-- Title -->
-        <h1>Learn to code by watching others</h1>
-        <!-- Text -->
-        <h3>
-          See how experienced developers solve problems in real-time. Watching
-          scripted tutorials is great, but understanding how developers think is
-          invaluable.
-        </h3>
+        <div class="text-container">
+          <!-- Title -->
+          <h1>Learn to code by watching others</h1>
+          <!-- Text -->
+          <h3>See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.</h3>
+        </div>
       </div>
       <div class="left-container">
-        <div class="link-container">
+        <div class="link-container shadow">
           <!-- Button -->
           <a href=""><b>Try it free 7 days</b> then $20/mo. thereafter</a>
         </div>
         <div>
-          <form action="" class="form">
+          <form class="form shadow">
             <input
               id="firstName"
               placeholder="First Name"
               type="text"
+              required
             />
+            <span class="error-text"><i>First Name cannot be empty</i></span>
             <input
               id="lastName"
               placeholder="Last Name"
               type="text"
+              required
             />
+            <span class="error-text"><i>Last Name cannot be empty</i></span>
             <input
               id="emailAddress"
               placeholder="Email Address"
               type="email"
+              required
             />
+            <span class="error-text"
+              ><i>Looks like this is not an email</i></span
+            >
             <input
               id="password"
               placeholder="Password"
               type="password"
+              required
             />
+            <span class="error-text"><i>Password cannot be empty</i></span>
             <button class="button">Claim your free trial</button>
-            <span
-              >By clicking the button, you are agreeing to our Terms and
-              Services</span
+            <span class="terms-text"
+              >By clicking the button, you are agreeing to our
+              <span class="terms-link">Terms and Services</span></span
             >
           </form>
         </div>
