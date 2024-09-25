@@ -52,39 +52,46 @@ body {
   background-color: var(--white-color);
   padding: 40px;
   border-radius: 10px;
-  input {
-    height: 40px;
-    border-radius: 5px;
+}
+
+.input {
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--light-grey-color);
+  padding: 6px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--dark-blue-color);
+  &:focus-visible {
     border-style: solid;
     border-width: thin;
-    border-color: var(--light-grey-color);
-    padding: 6px 30px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: var(--dark-blue-color);
-    &:focus-visible {
-      border-style: solid;
-      border-width: thin;
-      border-color: var(--dark-blue-color);
-      outline: none;
+    border-color: var(--dark-blue-color);
+    outline: none;
+  }
+  &:valid + .error-text {
+    display: none;
+  }
+  &:valid {
+    margin-bottom: 20px;
+  }
+}
+
+.input-error {
+  &:invalid {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--red-color);
+    background: url('./images/icon-error.svg') no-repeat right;
+    background-size: 20px;
+    background-origin: content-box;
+    background-position: right center;
+    &::placeholder {
+      color: var(--red-color);
     }
-    &:invalid {
-      border-style: solid;
-      border-width: 2px;
-      border-color: var(--red-color);
-      background: url('./images/icon-error.svg') no-repeat right;
-      background-size: 20px;
-      background-origin: content-box;
-      background-position: right center;
-      &::placeholder {
-        color: var(--red-color);
-      }
-    }
-    &:valid + .error-text {
-      display: none;
-    }
-    &:valid {
-      margin-bottom: 20px;
+    &.error-text {
+      display: block;
     }
   }
 }
@@ -119,6 +126,9 @@ body {
   border: solid var(--green-border) 1.7px;
   font-weight: 600;
   box-shadow: var(--green-border) 0px 3px;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .shadow {
