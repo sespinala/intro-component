@@ -73,9 +73,13 @@ body {
   &:valid + .error-text {
     display: none;
   }
-  &:valid {
+  /* &:valid {
     margin-bottom: 20px;
-  }
+  } */
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
 }
 
 .input-error {
@@ -87,6 +91,7 @@ body {
     background-size: 20px;
     background-origin: content-box;
     background-position: right center;
+    margin-bottom: 0px;
     &::placeholder {
       color: var(--red-color);
     }
